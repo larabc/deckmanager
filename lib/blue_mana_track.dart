@@ -76,8 +76,8 @@ class _BlueManaTrackState extends State<BlueManaTrack> {
               children: [
                 ...decreaseButtons,
                 Row(
-                  children: [counterWidget],
                   mainAxisAlignment: MainAxisAlignment.center,
+                  children: [counterWidget],
                 ),
                 ...increaseButtons,
               ],
