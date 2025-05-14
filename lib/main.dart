@@ -56,18 +56,60 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 32),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              HighTides(key: _highTideKey),
-              SizedBox(height: 24),
-              BlueManaTrack(key: _blueManaKey),
-              SizedBox(height: 24),
-              IdeasUnboundPlayed(key: _ideasUnboundKey),
-              SizedBox(height: 24),
-              OpponentDeckTracker(key: _opponentDeckKey),
-            ],
+          padding: EdgeInsets.symmetric(horizontal: 12),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: HighTides(key: _highTideKey),
+                  ),
+                ),
+                SizedBox(height: 12),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: BlueManaTrack(key: _blueManaKey),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: IdeasUnboundPlayed(key: _ideasUnboundKey),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: OpponentDeckTracker(key: _opponentDeckKey),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
